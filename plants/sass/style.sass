@@ -9,6 +9,8 @@ html
 body
 	color: $black
 	font-family: Inika
+	width: 100vw
+	overflow-x: hidden
 header
 	background-color: $white
 a
@@ -63,13 +65,17 @@ li:hover
 	&-list
 		display: flex
 		justify-content: space-between
-		min-width: 452px
+		width: 452px
 		float: right
 		margin-right: 110px
 		@media (max-width: 768px)
 			margin-right: 50px
 			margin-top: 22px
-			min-width: 451px
+			width: 451px
+		@media (max-width: 740px)
+			width: 50vw
+			flex-wrap: wrap
+			gap: 2vw
 		li
 		li:hover
 			transform: scale(1.2)
@@ -90,6 +96,8 @@ li:hover
 	@media (max-width: 768px)
 		padding: 40px 50px 70px
 		flex-direction: row-reverse
+	@media (max-width: 380px)
+		padding: 24px 25px 24px
 	img
 		background-repeat: no-repeat
 		background-size: contain
@@ -100,6 +108,8 @@ li:hover
 			height: 254.5px
 			left: -2px
 			top: -2px
+		@media (max-width: 380px)
+			display: none
 	&-text
 		margin-top: 45px
 		float: right
@@ -116,6 +126,9 @@ li:hover
 				color: $green
 			@media (max-width: 768px)
 				font-size: 35px
+			@media (max-width: 380px)
+				font-size: 25px
+				line-height: 35px
 		p
 			max-width: 525.5px
 			font-weight: 400
@@ -139,6 +152,10 @@ li:hover
 			align-items: center
 			text-align: center
 			text-transform: uppercase
+			@media (max-width: 380px)
+				width: 100px
+				height: 34.14px
+				font-size: 10px
 		button:hover
 			color: #fff
 .about__block
@@ -158,12 +175,17 @@ li:hover
 		justify-content: center
 		flex-wrap: wrap
 		padding: 30px 50px 95px
+	@media (max-width: 380px)
+		padding: 30px 25px 30px
 	img
 		width: 464px
 		height: 479px
 		@media (max-width: 768px)
 			width: 250px
 			height: 258px
+		@media (max-width: 380px)
+			width: 150px
+			height: 147px
 	&-text
 		max-width: 605px
 		margin-top: 10px
@@ -180,6 +202,9 @@ li:hover
 				text-align: center
 				font-size: 35px
 				line-height: 46px
+			@media (max-width: 380px)
+				font-size: 25px
+				line-height: 33px	
 			span
 				color: $orange
 		p
@@ -193,6 +218,10 @@ li:hover
 			@media (max-width: 768px)
 				text-align: left
 				margin: 50px -10px 68px auto
+			@media (max-width: 380px)
+				font-size: 15px
+				line-height: 25px
+				margin: 22px -10px 1px auto
 .service
 	background-color: $white
 .service__block
@@ -211,6 +240,8 @@ li:hover
 		@media (max-width: 768px)
 			margin-top: 42px
 			gap: 40px
+		@media (max-width: 740px)
+			flex-wrap: wrap
 	&-title
 		display: flex
 		justify-content: space-between
@@ -442,6 +473,8 @@ li:hover
 		margin-top: 108px
 		@media (max-width: 768px)
 			margin-top: 98px
+		@media (max-width: 510px)
+			width: 320px
 .footer__block
 	display: flex
 	flex-direction: row
