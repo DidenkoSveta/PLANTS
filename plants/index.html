@@ -17,22 +17,24 @@
 </head>
 
 <body>
+   <!-- header block -->
    <header>
       <div class="header__block">
          <a class="header__block-logo" href="#"><img src="assets/svg/logo.svg" alt="logo"></a>
          <nav>
             <ul class="header__block-list">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About us</a></li>
-               <li><a href="#">Service</a></li>
-               <li><a href="#">Price</a></li>
-               <li><a href="#">Contacts</a></li>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About us</a></li>
+               <li><a href="#services">Service</a></li>
+               <li><a href="#price">Price</a></li>
+               <li><a href="#contact">Contacts</a></li>
             </ul>
          </nav>
       </div>
    </header>
    <main>
-      <section class="welcome">
+      <!-- welcome section -->
+      <section class="welcome" id="home">
          <div class="welcome__block">
             <img class="welcome__block-img" src="assets/img/leafs.png" alt="leafs">
             <div class="welcome__block-text">
@@ -43,10 +45,11 @@
             </div>
          </div>
       </section>
-      <section class="about">
+      <!-- section about -->
+      <section class="about" id="about">
          <div class="about__block">
             <div class="about__block-text">
-               <h2>We are <span>professional experienced</span> gardeners</h2>
+               <h2>We are <span>professional<br> experienced</span> gardeners</h2>
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                   scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
@@ -55,13 +58,16 @@
             <img src="assets/img/plant-about.png" alt="plant" class="about__block-img">
          </div>
       </section>
-      <section class="service">
+      <!-- section service -->
+      <section class="service" id="services">
          <div class="service__block">
             <div class="service__block-title">
                <h2>Service and our<br> projects</h2>
-               <button type="button" class="service__block-btn">Gardens</button>
-               <button type="button" class="service__block-btn">Lawn</button>
-               <button type="button" class="service__block-btn">Planting</button>
+               <div class="service__block-btns">
+                  <button type="button" class="service__block-btn">Gardens</button>
+                  <button type="button" class="service__block-btn">Lawn</button>
+                  <button type="button" class="service__block-btn">Planting</button>
+               </div>
             </div>
             <div class="service__block-grid">
                <div class="service__block-card">
@@ -97,7 +103,8 @@
             </div>
          </div>
       </section>
-      <section class="prices">
+      <!-- section prices -->
+      <section class="prices" id="price">
          <div class="prices__block">
             <div class="prices__block-left">
                <h3>Prices</h3>
@@ -114,7 +121,8 @@
             </div>
          </div>
       </section>
-      <section class="contacts">
+      <!-- section contacts -->
+      <section class="contacts" id="contact">
          <div class="contacts__block">
             <img class="contacts__block-img" src="assets/img/woman.png" alt="woman">
             <h2>Contact us</h2>
@@ -122,17 +130,23 @@
          </div>
       </section>
    </main>
+   <!-- footer block -->
    <footer>
       <div class="footer__block">
-         <p class="footer__block-copyright">&copy; 2022&nbsp;<a href="#" class="footer__block-link">&nbsp;github</a></p>
-         <a href="#" class="footer__block-link">Rolling Scopes School</a>
+         <p class="footer__block-copyright">&copy;&nbsp;&nbsp;&nbsp; 2022&nbsp;<a href="https://github.com/DidenkoSveta"
+               class="footer__block-link">&nbsp;&nbsp;github</a></p>
+         <a href="https://rs.school/js-stage0/" class="footer__block-rs">Rolling Scopes School</a>
          <ul>
-            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/inst.svg" alt="instagram"></a>
+            <li class="footer__block-link"><a href="https://instagram.com/garpia_lana?igshid=OGQ2MjdiOTE="><img
+                     src="assets/svg/social-links/inst.svg" alt="instagram"></a>
             </li>
-            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/fb.svg" alt="facebook"></a>
+            <li class="footer__block-link"><a href="https://vk.com/garpia_lana"><img
+                     src="assets/svg/social-links/fb.svg" alt="facebook"></a>
             </li>
-            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/tw.svg" alt="twitter"></a></li>
-            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/pint.svg" alt="pinterest"></a>
+            <li class="footer__block-link"><a href="https://twitter.com/SvetlanaDiden18"><img
+                     src="assets/svg/social-links/tw.svg" alt="twitter"></a></li>
+            <li class="footer__block-link"><a href="https://ru.pinterest.com/"><img
+                     src="assets/svg/social-links/pint.svg" alt="pinterest"></a>
             </li>
          </ul>
       </div>
