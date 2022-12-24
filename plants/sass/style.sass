@@ -4,6 +4,8 @@ $grey: #717171
 $dgrey: #636060
 $white: #EDF2EC
 $black: #010201
+html
+	scroll-behavior: smooth
 body
 	color: $black
 	font-family: Inika
@@ -18,6 +20,7 @@ a:hover
 	color: $orange
 	transform: scale(1.1)
 	cursor: pointer
+	transition-duration: 0.4s
 a:active
 	color: $orange
 button
@@ -29,7 +32,8 @@ button
 button:hover
 	background: $orange
 	color: $white
-	transform: scaleX(1.1)
+	transform: scale(1.1)
+	transition-duration: 0.4s
 	cursor: pointer
 h1, h2, h3, h6
 	margin: 0
@@ -37,7 +41,7 @@ p
 	margin: 0
 li
 	list-style: none
-li:hover 
+li:hover
 	transform: scale(1.2)
 .header__block
 	max-width: 1440px
@@ -145,7 +149,7 @@ li:hover
 			line-height: 30px
 			color: $dgrey
 			margin-top: 40px
-.service 
+.service
 	background-color: $white
 .service__block
 	max-width: 1440px
@@ -153,7 +157,7 @@ li:hover
 	background-color: $white
 	padding: 40px 109px 5px
 	box-sizing: border-box
-	&-btns 
+	&-btns
 		gap: 39px
 		display: flex
 		max-width: 560px
@@ -287,7 +291,7 @@ li:hover
 			margin: 40px 0 36px
 		button:hover
 			color: #fff
-.contacts 
+.contacts
 	background-color: $white
 .contacts__block
 	display: flex
@@ -345,7 +349,7 @@ li:hover
 	padding: 28px 109px 0px
 	color: #000
 	font-size: 20px
-	&-rs 
+	&-rs
 		margin-left: 60px
 	a
 		font-family: Inter
