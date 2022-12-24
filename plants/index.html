@@ -1,23 +1,142 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Document</title>
+   <link rel="icon" href="assets/svg/favicon.svg">
+   <title>Plants</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-   <div class="text">d,msdfmn,manfd
-<div class="text-small">gdfgdfb</div></div>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"></script>
+   <header>
+      <div class="header__block">
+         <a class="header__block-logo" href="#"><img src="assets/svg/logo.svg" alt="logo"></a>
+         <nav>
+            <ul class="header__block-list">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Service</a></li>
+               <li><a href="#">Price</a></li>
+               <li><a href="#">Contacts</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <section class="welcome">
+         <div class="welcome__block">
+            <img class="welcome__block-img" src="assets/img/leafs.png" alt="leafs">
+            <div class="welcome__block-text">
+               <h1>We grow <span>plants</span> and give you oxygen</h1>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s.</p>
+               <button type="button" class="welcome__block-btn">learn more</button>
+            </div>
+         </div>
+      </section>
+      <section class="about">
+         <div class="about__block">
+            <div class="about__block-text">
+               <h2>We are <span>professional experienced</span> gardeners</h2>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <img src="assets/img/plant-about.png" alt="plant" class="about__block-img">
+         </div>
+      </section>
+      <section class="service">
+         <div class="service__block">
+            <div class="service__block-title">
+               <h2>Service and our<br> projects</h2>
+               <button type="button" class="service__block-btn">Gardens</button>
+               <button type="button" class="service__block-btn">Lawn</button>
+               <button type="button" class="service__block-btn">Planting</button>
+            </div>
+            <div class="service__block-grid">
+               <div class="service__block-card">
+                  <img src="assets/img/service/first.jpg" alt="photo-plants">
+                  <h6>Garden care</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+               <div class="service__block-card">
+                  <img src="assets/img/service/second.jpg" alt="photo-plants">
+                  <h6>Planting</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+               <div class="service__block-card">
+                  <img src="assets/img/service/third.jpg" alt="photo-plants">
+                  <h6>Lawn care</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+               <div class="service__block-card">
+                  <img src="assets/img/service/fourth.jpg" alt="photo-plants">
+                  <h6>Planting</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+               <div class="service__block-card">
+                  <img src="assets/img/service/fifth.jpg" alt="photo-plants">
+                  <h6>Garden care</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+               <div class="service__block-card">
+                  <img src="assets/img/service/sixth.jpg" alt="photo-plants">
+                  <h6>Planting</h6>
+                  <p>Lorem Ipsum has been the industry</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="prices">
+         <div class="prices__block">
+            <div class="prices__block-left">
+               <h3>Prices</h3>
+               <div class="prices__block-prices">
+                  <div class="prices__block-collapsible">Basic<img src="assets/svg/check.svg" alt="check"></div>
+                  <div class="prices__block-collapsible">Standart<img src="assets/svg/check.svg" alt="check"></div>
+                  <div class="prices__block-collapsible">Pro care<img src="assets/svg/check.svg" alt="check"></div>
+               </div>
+            </div>
+            <div class="prices__block-right">
+               <h2>Our best <span>gardeners</span> are<br> ready to help you</h2>
+               <button type="button">Contact us</button>
+               <img src="assets/img/leafs-small.png" alt="leafs">
+            </div>
+         </div>
+      </section>
+      <section class="contacts">
+         <div class="contacts__block">
+            <img class="contacts__block-img" src="assets/img/woman.png" alt="woman">
+            <h2>Contact us</h2>
+            <div class="contacts__block-collapsible">City <img src="assets/svg/city-check.svg" alt="city-check"> </div>
+         </div>
+      </section>
+   </main>
+   <footer>
+      <div class="footer__block">
+         <p class="footer__block-copyright">&copy; 2022&nbsp;<a href="#" class="footer__block-link">&nbsp;github</a></p>
+         <a href="#" class="footer__block-link">Rolling Scopes School</a>
+         <ul>
+            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/inst.svg" alt="instagram"></a>
+            </li>
+            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/fb.svg" alt="facebook"></a>
+            </li>
+            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/tw.svg" alt="twitter"></a></li>
+            <li class="footer__block-link"><a href="#"><img src="assets/svg/social-links/pint.svg" alt="pinterest"></a>
+            </li>
+         </ul>
+      </div>
+   </footer>
 </body>
 
 </html>

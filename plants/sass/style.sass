@@ -1,2 +1,326 @@
+$green: #499A18
+$orange: #E06733
+$grey: #717171
+$dgrey: #636060
+$white: #EDF2EC
+$black: #010201
 body
-   background: green
+	color: $black
+	font-family: Inika
+// header
+// 	background-color: $white
+a
+	font-family: Inika
+	text-decoration: none
+	color: $black
+	text-decoration: none
+a:hover
+	color: $orange
+	cursor: pointer
+a:active
+	color: $orange
+button
+	padding: 0
+	margin: 0
+	border: 2px solid #E06733
+	box-sizing: border-box
+	background: none
+button:hover
+	background: $orange
+	color: $white
+h1, h2, h3, h6
+	margin: 0
+p
+	margin: 0
+li
+	list-style: none
+.header__block
+	max-width: 1440px
+	margin: 0 auto
+	background-color: $white
+	height: 134px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	&-logo
+		margin-left: 110px
+	&-logo:hover
+		transform: scale(1.4)
+	&-list
+		display: flex
+		justify-content: space-between
+		min-width: 452px
+		float: right
+		margin-right: 110px
+		li
+		li:hover
+			transform: scale(1.2)
+			a
+				font-size: 16px
+.welcome__block
+	max-width: 1440px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	font-family: Inter
+	background-color: $white
+	padding: 62px 109px
+	box-sizing: border-box
+
+	img
+		background-repeat: no-repeat
+		background-size: contain
+	&-text
+		float: right
+		max-width: 550px
+		h1
+			color: $grey
+			font-weight: 700
+			font-size: 45px
+			line-height: 50px
+			span
+				color: $green
+		p
+			max-width: 525.5px
+			font-weight: 400
+			font-size: 20px
+			line-height: 35px
+			color: $dgrey
+			margin: 42px auto 48px
+		button
+			border-radius: 10px
+			color: #000
+			width: 158px
+			height: 44px
+			font-weight: 400
+			font-size: 16px
+			line-height: 20px
+			align-items: center
+			text-align: center
+			text-transform: uppercase
+		button:hover
+			color: #fff
+.about__block
+	max-width: 1440px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	font-family: Inter
+	background-color: #fff
+	padding: 93px 109px
+	box-sizing: border-box
+	img
+		width: 464px
+		height: 479px
+	&-text
+		max-width: 605px
+		margin-top: 70px
+		h2
+			color: $green
+			font-family: Inika
+			font-style: normal
+			font-weight: 400
+			font-size: 40px
+			line-height: 52px
+			span
+				color: $orange
+		p
+			font-family: Inter
+			font-style: normal
+			font-weight: 400
+			font-size: 20px
+			line-height: 30px
+			color: $dgrey
+			margin-top: 40px
+.service__block
+	max-width: 1440px
+	margin: 0 auto
+	background-color: $white
+	padding: 93px 109px 5px
+	box-sizing: border-box
+	&-title
+		display: flex
+		justify-content: space-between
+		max-width: 1007px
+		h2
+			color: $green
+			font-family: Inika
+			font-weight: 400
+			font-size: 40px
+			line-height: 52px
+		button
+			width: 161px
+			height: 50px
+			color: $orange
+			font-family: Inika
+			font-weight: 400
+			font-size: 20px
+			line-height: 26px
+			border: 1px solid #E06733
+			border-radius: 5px
+		button:hover
+			color: #fff
+	&-grid
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 55px
+		margin: 90px auto 119px
+	&-card
+		border: 1px solid #E3E1D5
+		border-radius: 0px 0px 20px 20px
+		img
+			border-radius: 20px 20px 0px 0px
+		h6
+			color: $orange
+			font-family: Inter
+			font-weight: 700
+			font-size: 20px
+			line-height: 20px
+			margin: 10px auto
+			text-align: center
+		p
+			color: $grey
+			font-family: Inter
+			font-weight: 400
+			font-size: 16px
+			line-height: 20px
+			padding-bottom: 36px
+			text-align: center
+.prices__block
+	max-width: 1440px
+	margin: 0 auto 50px
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	background-color: #fff
+	padding: 40px 109px
+	box-sizing: border-box
+	color: #000
+	font-family: Inter
+	font-style: normal
+	&-left
+		h3
+			font-weight: 700
+			font-size: 40px
+			line-height: 48px
+	&-prices
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		width: 332px
+		height: 282px
+		border: 1px solid #E3E1D5
+		border-radius: 20px
+		box-sizing: border-box
+		gap: 32px
+		margin-top: 60px
+	&-collapsible
+		width: 250px
+		height: 50px
+		border-radius: 20px
+		background: $white
+		color: #000
+		font-family: Inter
+		font-style: normal
+		font-weight: 700
+		font-size: 20px
+		line-height: 20px
+		border: none
+		display: flex
+		align-items: center
+		justify-content: space-evenly
+	&-right
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		h2
+			font-weight: 700
+			font-size: 40px
+			line-height: 50px
+			text-align: right
+			span
+				color: $green
+		img
+			width: 152px
+			height: 175px
+		button
+			width: 162px
+			height: 50px
+			color: $orange
+			font-family: Inika
+			font-style: normal
+			font-weight: 700
+			font-size: 20px
+			line-height: 26px
+			text-align: center
+			border: 1px solid #E06733
+			border-radius: 5px
+			margin: 38px 0
+		button:hover
+			color: #fff
+.contacts__block
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	max-width: 1440px
+	margin: 0 auto
+	background-color: $white
+	box-sizing: border-box
+	font-family: Inika
+	font-style: normal
+	padding: 40px 109px
+	&-img
+		margin-top: 13px
+	h2
+		color: $green
+		font-weight: 700
+		font-size: 40px
+		line-height: 52px
+		margin-top: 20px
+	&-collapsible
+		background: #D6E7D2
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		border-radius: 0px
+		font-family: Inter
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 40px
+		letter-spacing: 0.05em
+		color: #717171
+		width: 450px
+		height: 50px
+		border: none
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-left: 20px
+		padding-right: 35px
+		box-sizing: border-box
+		margin-top: 148px
+.footer__block
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	max-width: 1440px
+	margin: 0 auto
+	background-color: #fff
+	box-sizing: border-box
+	font-family: Inter
+	font-style: normal
+	padding: 40px 109px
+	color: #000
+	font-size: 20px
+	a
+		font-family: Inter
+	ul
+		display: flex
+		gap: 20px
