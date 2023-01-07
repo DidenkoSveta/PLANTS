@@ -111,9 +111,30 @@
             <div class="prices__block-left">
                <h3>Prices</h3>
                <div class="prices__block-prices">
-                  <div class="prices__block-collapsible">Basis<img src="assets/svg/check.svg" alt="check"></div>
-                  <div class="prices__block-collapsible">Standart<img src="assets/svg/check.svg" alt="check"></div>
-                  <div class="prices__block-collapsible">Pro care<img src="assets/svg/check.svg" alt="check"></div>
+                  <div class="block__basics"><button class="accordion prices__block-collapsible"
+                        onclick="sectionBasis()">Basis</button>
+                     <div class="panel" id="panel-basis">
+                        <p class="panel-title">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                        <p class="panel-cost"><span>$15</span> / per hour</p>
+                        <a href="#contact" class="order">order</a>
+                     </div>
+                  </div>
+                  <div class="block__standart"><button class="accordion prices__block-collapsible"
+                        onclick="sectionStandart()">Standart</button>
+                     <div class="panel" id="panel-standart">
+                        <p class="panel-title">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                        <p class="panel-cost"><span>$25</span> / per hour</p>
+                        <a href="#contact" class="order">order</a>
+                     </div>
+                  </div>
+                  <div class="block__procare"><button class="accordion prices__block-collapsible" onclick="sectionProCare()">Pro
+                        care</button>
+                     <div class="panel" id="panel-procare">
+                        <p class="panel-title">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                        <p class="panel-cost"><span>$35</span> / per hour</p>
+                        <a href="#contact" class="order">order</a>
+                     </div>
+                  </div>
                </div>
             </div>
             <div class="prices__block-right">
@@ -128,7 +149,74 @@
          <div class="contacts__block">
             <img class="contacts__block-img" src="assets/img/woman.png" alt="woman">
             <h2>Contact us</h2>
-            <div class="contacts__block-collapsible">City <img src="assets/svg/city-check.svg" alt="city-check"> </div>
+            <div class="contacts__block-forms">
+               <form>
+                  <div class="__select" data-state="">
+                     <div class="__select__title" data-default="Option 0">City</div>
+                     <div class="__select__content">
+
+                        <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked>
+                        <label for="singleSelect0" class="__select__label">City</label>
+
+                        <input onclick="CanandaiguaForma()" id="singleSelect1" class="__select__input" type="radio"
+                           name="singleSelect">
+                        <label for="singleSelect1" class="__select__label">Canandaigua, NY</label>
+
+                        <input onclick="NYForma()" id="singleSelect2" class="__select__input" type="radio"
+                           name="singleSelect">
+                        <label for="singleSelect2" class="__select__label">New York City</label>
+
+                        <input onclick="YonkersForma()" id="singleSelect3" class="__select__input" type="radio"
+                           name="singleSelect">
+                        <label for="singleSelect3" class="__select__label">Yonkers, NY</label>
+
+                        <input onclick="SherrillForma()" id="singleSelect4" class="__select__input" type="radio"
+                           name="singleSelect">
+                        <label for="singleSelect4" class="__select__label">Sherrill, NY</label>
+                     </div>
+                  </div>
+               </form>
+               <div class="form__contacts-city" id="SherrillForma">
+                  <form class="form-container">
+                     <div>
+                        <p><span>City: </span>Sherrill, NY</p>
+                        <p><span>Phone: </span>+1 315 908 0004</p>
+                        <p><span>Office adress: </span>14 WEST Noyes BLVD</p>
+                     </div>
+                     <a href="tel:+13159080004" class="btn">Call us</a>
+                  </form>
+               </div>
+               <div class="form__contacts-city" id="YonkersForma">
+                  <form class="form-container">
+                     <div class="">
+                        <p><span>City: </span>Yonkers, NY</p>
+                        <p><span>Phone: </span>+1 914 678 0003</p>
+                        <p><span>Office adress: </span>511 Warburton Ave</p>
+                     </div>
+                     <a href="tel:+19146780003" class="btn">Call us</a>
+                  </form>
+               </div>
+               <div class="form__contacts-city" id="CanandaiguaForma">
+                  <form class="form-container">
+                     <div class="">
+                        <p><span>City: </span>Canandaigua, NY</p>
+                        <p><span>Phone: </span>+1 585 393 0001</p>
+                        <p><span>Office adress: </span>151 Charlotte Street</p>
+                     </div>
+                     <a href="tel:+15853930001" class="btn">Call us</a>
+                  </form>
+               </div>
+               <div class="form__contacts-city" id="NYForma">
+                  <form class="form-container">
+                     <div class="">
+                        <p><span>City: </span>New York City</p>
+                        <p><span>Phone: </span>+1 212 456 0002</p>
+                        <p><span>Office adress: </span>9 East 91st Street</p>
+                     </div>
+                     <a href="tel:+12124560002" class="btn">Call us</a>
+                  </form>
+               </div>
+            </div>
          </div>
       </section>
    </main>
@@ -154,6 +242,7 @@
       </div>
    </footer>
    <script src="js/burger.js"></script>
+   <script src="js/contacts.js"></script>
 </body>
 
 </html>

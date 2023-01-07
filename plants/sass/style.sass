@@ -445,12 +445,12 @@ li:hover
 		align-items: center
 		justify-content: center
 		width: 332px
-		height: 282px
 		border: 1px solid #E3E1D5
 		border-radius: 20px
 		box-sizing: border-box
-		gap: 32px
-		margin-top: 60px
+		gap: 32px 
+		padding-top: 30px
+		padding-bottom: 30px
 		@media (max-width: 768px)
 			margin-top: 58px
 		@media (max-width: 380px)
@@ -474,6 +474,8 @@ li:hover
 		display: flex
 		align-items: center
 		justify-content: space-around
+		position: relative
+		z-index: 2
 		@media (max-width: 380px)
 			box-sizing: border-box
 			justify-content: space-between
@@ -484,8 +486,45 @@ li:hover
 			height: 50px
 			font-size: 15px
 			line-height: 20px
-		img
-			position: relative
+		button::after,
+		button::before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 26px
+			display: block
+			width: 10px
+			height: 2px
+			transition: all 0.3s ease-out
+			transform: translate(-3px, -50%) rotate(-45deg)
+		button::after
+			background: url("../assets/svg/check.svg")
+			height: 16px
+			width: 16px
+			background-size: contain
+			background-repeat: no-repeat
+			transform: translate(3px, -50%) rotate(180deg)
+	&-collapsible:hover
+		background: $white
+		color: $black
+		transform: scale(1)
+		transition-duration: 0.4s
+	&-collapsible:active
+		background: #D6E7D2
+		color: $black
+		transform: scale(1)
+		transition-duration: 0.1s
+		border-radius: 20px 20px 0px 0px
+		background: #D6E7D2
+	&-collapsible:focus
+		border-radius: 20px 20px 0px 0px
+		background: #D6E7D2
+	&[data-state="active"]
+		.prices-btns
+			&::before
+				transform: translate(-3px, -50%) rotate(180deg)
+			&::after
+				transform: translate(3px, -50%) rotate(0deg)
 	&-right
 		display: flex
 		flex-direction: column
@@ -562,6 +601,10 @@ li:hover
 		align-content: center
 	@media (max-width: 380px)
 		padding: 20px 25px 1px
+	&-forms
+		position: relative
+		margin-top: 130px
+		margin-right: 100px
 	&-img
 		margin-top: 13px
 		@media (max-width: 768px)
@@ -621,6 +664,12 @@ li:hover
 			margin-top: 80px
 		img
 			margin-right: -13px
+.contacts__block-collapsible:hover
+	background: #D6E7D2
+	color: $grey
+	transform: scale(1)
+	transition-duration: 0.4s
+	cursor: pointer
 .footer__block
 	display: flex
 	flex-direction: row
@@ -656,3 +705,200 @@ li:hover
 		@media (max-width: 380px)
 			margin-top: 6px
 			margin-bottom: 0px
+.__select
+	box-sizing: border-box
+	position: relative
+	width: 450px
+	height: 50px
+	margin: 0 auto
+	background-color: #D6E7D2
+	.__select:active
+		background-color: #C1E698
+	&[data-state="active"]
+		.__select__title
+			background-color: #C1E698
+			&::before
+				transform: translate(-3px, -50%) rotate(180deg)
+			&::after
+				transform: translate(3px, -50%) rotate(0deg)
+		.__select__content
+			opacity: 1
+			background-color: #D6E7D2
+		.__select__label + .__select__input + .__select__label
+			max-height: 50px
+			border-top-width: 0.1px
+.__select__title
+	box-sizing: border-box
+	display: flex
+	align-items: center
+	width: 100%
+	height: 100%
+	padding: 10px 16px 10px 35px
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	border-radius: 0px
+	cursor: pointer
+	color: $dgrey
+	font-family: 'Inter'
+	font-style: normal
+	font-weight: 400
+	font-size: 20px
+	line-height: 40px
+	letter-spacing: 0.05em
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 26px
+		display: block
+		width: 10px
+		height: 2px
+		transition: all 0.3s ease-out
+		transform: translate(-3px, -50%) rotate(-45deg)
+	&::after
+		background: url("../assets/svg/check.svg")
+		height: 16px
+		width: 16px
+		background-size: contain
+		background-repeat: no-repeat
+		transform: translate(3px, -50%) rotate(180deg)
+	&:hover
+		color: #717171
+.__select__title:focus
+	background-color: $green
+.__select__content
+	box-sizing: border-box
+	position: absolute
+	top: 50px
+	left: 0px
+	display: flex
+	flex-direction: column
+	width: 100%
+	background-color: #DCE9D9
+	border-top: none
+	transition: all 0.3s ease-out
+	opacity: 0
+	z-index: 8
+	color: #499A18
+	font-family: 'Inter'
+	font-style: normal
+	font-weight: 400
+	font-size: 16px
+	line-height: 40px
+	letter-spacing: 0.05em
+	padding: 27px 35px 31px
+.__select__input
+	box-sizing: border-box
+	display: none
+	&:checked + label
+		background-color: #DCE9D9
+	&:disabled + label
+		opacity: 0.6
+		pointer-events: none
+.__select__label
+	box-sizing: border-box
+	align-items: center
+	display: flex
+	width: 100%
+	height: 40px
+	max-height: 0
+	padding: 0px 41px
+	transition: all 0.2s ease-out
+	cursor: pointer
+	overflow: hidden
+	& + input + &
+		border-bottom: 1px solid #D9D9D9
+.__select__label:hover
+	color: #717171
+	border-bottom: 1px solid #717171
+.form__contacts-city
+	box-sizing: border-box
+	background: #EDF2EC
+	border: 1px solid #000000
+	border-radius: 20px
+	width: 448px
+	height: 214px
+	padding: 17px 76px 32px 33px
+	position: relative
+	margin-top: 48px
+.form-container
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	a
+		position: relative
+		box-sizing: border-box
+		width: 122px
+		height: 26px
+		font-family: Inika
+		font-style: normal
+		font-weight: 700
+		font-size: 10px
+		line-height: 13px
+		text-align: center
+		color: #717171
+		border: 1px solid #E06733
+		border-radius: 5px
+		margin: 24px auto 0
+		display: flex
+		align-items: center
+		justify-content: center
+	p
+		font-family: Inter
+		font-style: normal
+		font-weight: 400
+		font-size: 16px
+		line-height: 40px
+		letter-spacing: 0.05em
+		color: #717171
+		span
+			color: #000
+.panel
+	box-sizing: border-box
+	background: #D6E7D2
+	border-radius: 0px 0px 20px 20px
+	width: 250px
+	height: 120px
+	position: relative
+	top: -20px
+	z-index: 1
+	padding: 20px 40px 30px 40px
+	&-title
+		font-family: Inter
+		font-style: normal
+		font-weight: 300
+		font-size: 10px
+		line-height: 10px
+		color: #717171
+		border-top: 0.5px solid #717171
+		padding-top: 6px
+	&-cost
+		font-family: Inter
+		font-style: normal
+		font-weight: 400
+		font-size: 12px
+		line-height: 20px
+		color: #000000
+		padding-top: 6px
+		span
+			color: #E06733
+			font-size: 18px
+.order
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 86px
+	height: 25px
+	background: #FFFFFF
+	border-radius: 10px
+	font-family: Inter
+	font-style: normal
+	font-weight: 700
+	font-size: 14px
+	line-height: 20px
+	color: #717171
+.order:hover
+#SherrillForma, #YonkersForma, #CanandaiguaForma, #NYForma
+	display: none
+#panel-standart, #panel-procare, #panel-basis
+	display: none
